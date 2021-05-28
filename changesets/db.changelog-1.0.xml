@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+	<changeSet author="FranciscoHdez" id="28-05-2021-001">
+		<createTable tableName="CATALOG">
+			<column name="CATALOG_ID" type="int">
+				<constraints primaryKey="true" primaryKeyName="PK_CATALOG"/>
+			</column>
+			<column name="DESCRIPTION" type="nvarchar(100)" />
+			<column name="STATUS_CODE" type="numeric(1,0)" />
+			<column name="CATALOG_CODE" type="nvarchar(5)" />
+			<column name="_PATH" type="nvarchar(100)" />
+		</createTable>
+	</changeSet>
+	
+</databaseChangeLog> 

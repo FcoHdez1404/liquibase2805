@@ -1,0 +1,11 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <!-- Al elimiar algun campo de una tabla existente o modificar estructura en alguna tabla que afecte las cargas inciales, subir de versión el xml correspondiente -->
+  <include file="db.changelog-1.0.xml"/>
+  <include file="db.create.catalog-1.0.xml"/>
+  <include file="db.rollback.catalog.xml"/>
+  <include file="db.contraint.module.xml"/>
+
+</databaseChangeLog> 

@@ -1,0 +1,20 @@
+<changeSet author="vn0tpmh" id="15-10-2019-004">
+		<createTable tableName="ROLE">
+			<column name="SK_ROLE_ID" type="int">
+				<constraints primaryKey="true" primaryKeyName="PK_ROLE"/>
+			</column>
+			<column name="DESCRIPTION" type="nvarchar(150)" />
+		</createTable>
+	</changeSet>
+
+	<changeSet author="vn0tpmh" id="15-10-2019-005">
+		<createTable tableName="ROLE_USER">
+			<column name="ROLE_USER_ID" type="int">
+				<constraints primaryKey="true" primaryKeyName="PK_ROLE_USER"/>
+			</column>
+			<column name="KN_ROLE_ID" type="int">
+				<constraints nullable="false" foreignKeyName="FK_ROLE_USER_ROLE" references="ROLE(SK_ROLE_ID)"/>
+			</column>
+			<column name="USER" type="nvarchar(10)" />
+		</createTable>
+	</changeSet>
